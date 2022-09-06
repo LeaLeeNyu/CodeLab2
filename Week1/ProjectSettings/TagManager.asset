@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Background
+  - YellowFence
+  - YellowCircle
+  - BlueFence
+  - BlueCircle
+  - RedFence
+  - RedCircle
   layers:
   - Default
   - TransparentFX
@@ -40,4 +47,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3511239741
+    locked: 0
+  - name: Player
+    uniqueID: 2072788237
+    locked: 0
+  - name: Collider
+    uniqueID: 2602404501
+    locked: 0
+  - name: Fence
+    uniqueID: 1815805537
     locked: 0
