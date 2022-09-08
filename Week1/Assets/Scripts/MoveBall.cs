@@ -21,8 +21,6 @@ public class MoveBall : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
         Vector2 forceVector = new Vector2(xSpeed * horizontalInput, ySpeed * verticalInput);
         rb.AddForce(forceVector);
-
-
-
+        //rb.velocity = forceVector;
     }
 }

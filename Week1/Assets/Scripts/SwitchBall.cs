@@ -11,7 +11,7 @@ public class SwitchBall : MonoBehaviour
 
     private Sprite yellow;
     private Sprite blue;
-    private Sprite red;
+    private Sprite green;
 
 
     private void Start()
@@ -21,28 +21,12 @@ public class SwitchBall : MonoBehaviour
 
         yellow = Resources.Load<Sprite>("Sprites/Yellow");
         blue = Resources.Load<Sprite>("Sprites/Blue");
-        red = Resources.Load<Sprite>("Sprites/Red");
-
-        //ballSprites.Add("Blue", blue);
+        green = Resources.Load<Sprite>("Sprites/Green");
+     
         allBalls.Add(blue);
         spriteRenderer.sprite = allBalls[ballNumber];
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if(ballNumber == allBalls.Count-1)
-            {
-                ballNumber = 0;
-            }
-            else {
-                ballNumber++;
-            }
-
-            spriteRenderer.sprite = allBalls[ballNumber];
-        }       
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -61,10 +45,10 @@ public class SwitchBall : MonoBehaviour
 
             GameObject.Destroy(collision.gameObject);
         }
-        else if (collision.gameObject.tag == "RedCircle" && !allBalls.Contains(red))
+        else if (collision.gameObject.tag == "GreenCircle" && !allBalls.Contains(green))
         {
-            spriteRenderer.sprite = red;
-            allBalls.Add(red);
+            spriteRenderer.sprite = green;
+            allBalls.Add(green);
 
             GameObject.Destroy(collision.gameObject);
         }

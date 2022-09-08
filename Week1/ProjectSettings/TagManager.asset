@@ -5,17 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - Background
-  - YellowFence
   - YellowCircle
-  - BlueFence
   - BlueCircle
-  - RedFence
-  - RedCircle
+  - Yellow
+  - Blue
+  - Green
+  - GreenCircle
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Fence
   - Water
   - UI
   - 
