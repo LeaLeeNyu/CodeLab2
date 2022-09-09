@@ -11,6 +11,8 @@ TagManager:
   - Blue
   - Green
   - GreenCircle
+  - Level1
+  - Level0
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - Fence
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 
