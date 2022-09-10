@@ -14,9 +14,13 @@ public class SwitchBall : MonoBehaviour
     private Sprite blue;
     private Sprite green;
 
-    public BoxCollider2D[] grenns;
+    public BoxCollider2D[] greens;
     public BoxCollider2D[] blues;
     public BoxCollider2D[] yellows;
+
+    public List<BoxCollider2D> greensList;
+    public List<BoxCollider2D> bluesList;
+    public List<BoxCollider2D> yellowsList;  
 
     private void Start()
     {
@@ -31,8 +35,24 @@ public class SwitchBall : MonoBehaviour
         gameObject.tag = "Blue";
         spriteRenderer.sprite = allBalls[ballNumber];
 
-        TriggerTure(blues);
+        AddtoList(greens, greensList);
+        AddtoList(blues, bluesList);
+        AddtoList(yellows, yellowsList);
+
+        TriggerTure(bluesList);
     }
+
+    void AddtoList(BoxCollider2D[] cols,List<BoxCollider2D> list)
+    {
+        foreach(BoxCollider2D col in cols)
+        {
+            if (col == null)
+                break;
+
+            list.Add(col);
+        }
+    }
+
 
     //Swith player's color
     private void OnTriggerEnter2D(Collider2D collision)
@@ -46,9 +66,9 @@ public class SwitchBall : MonoBehaviour
 
             GameObject.Destroy(collision.gameObject);
 
-            TriggerTure(yellows);
-            TriggerFalse(blues);
-            TriggerFalse(grenns);
+            TriggerTure(yellowsList);
+            TriggerFalse(bluesList);
+            TriggerFalse(greensList);
         }
         else if(collision.gameObject.tag == "BlueCircle" && !allBalls.Contains(blue))
         {
@@ -58,9 +78,9 @@ public class SwitchBall : MonoBehaviour
 
             GameObject.Destroy(collision.gameObject);
 
-            TriggerTure(blues);
-            TriggerFalse(yellows);
-            TriggerFalse(grenns);
+            TriggerTure(bluesList);
+            TriggerFalse(yellowsList);
+            TriggerFalse(greensList);
         }
         else if (collision.gameObject.tag == "GreenCircle" && !allBalls.Contains(green))
         {
@@ -70,15 +90,15 @@ public class SwitchBall : MonoBehaviour
 
             GameObject.Destroy(collision.gameObject);
 
-            TriggerTure(grenns);
-            TriggerFalse(yellows);
-            TriggerFalse(blues);
+            TriggerTure(greensList);
+            TriggerFalse(yellowsList);
+            TriggerFalse(bluesList);
         }
 
         
     }
 
-    void TriggerTure(BoxCollider2D[] colors)
+    void TriggerTure(List<BoxCollider2D> colors)
     {
         foreach (BoxCollider2D color in colors)
         {
@@ -86,11 +106,27 @@ public class SwitchBall : MonoBehaviour
         }
     }
 
-    void TriggerFalse (BoxCollider2D[] colors)
+    void TriggerFalse (List<BoxCollider2D> colors)
     {
         foreach (BoxCollider2D color in colors)
         {
             color.isTrigger = false;
+        }
+    }
+
+    public void RemovefromList(BoxCollider2D col)
+    {
+        if(col.gameObject.tag == "Yellow")
+        {
+            yellowsList.Remove(col);
+        }
+        else if (col.gameObject.tag == "Blue")
+        {
+            bluesList.Remove(col);
+        }
+        else if (col.gameObject.tag == "Green")
+        {
+            greensList.Remove(col);
         }
     }
 

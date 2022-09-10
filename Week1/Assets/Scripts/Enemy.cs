@@ -18,62 +18,20 @@ public class Enemy : MonoBehaviour
     Seeker seeker;
     Rigidbody2D rb;
 
-    private void Start()
+    private GameObject player;
+
+    private void Awake()
     {
-        //seeker = GetComponent<Seeker>();
-        //rb = GetComponent<Rigidbody2D>();
-
-        //InvokeRepeating("PathUpdating", 0, 3f);
-    }
-
-    void PathUpdating()
-    {
-        seeker.StartPath(rb.position, target.position, PathEnd);
-    }
-
-    void PathEnd(Path p)
-    {
-        if (!p.error)
-        {
-            path = p;
-            currentWayPoint = 0;
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        ////make sure there is a path
-        //if (path == null)
-        //    return; 
-
-        ////if enemy reach the end point of path
-        //if(currentWayPoint>= path.vectorPath.Count)
-        //{
-        //    reachEndOfPath = true;
-        //    return;
-        //}
-        //else
-        //{
-        //    reachEndOfPath = false;
-        //}
-
-        //Vector2 direction = ((Vector2)path.vectorPath[currentWayPoint] - rb.position).normalized;
-        //Vector2 force = direction * speed ;
-        //rb.AddForce(direction);
-
-        //float distance = Vector2.Distance(rb.position, path.vectorPath[currentWayPoint]);
-
-        //if(distance< nextWayPointDistance)
-        //{
-        //    currentWayPoint++;
-        //}
+        player = GameObject.Find("Player");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.layer == 3 && gameObject.tag == collision.gameObject.tag)
         {
+            player.GetComponent<SwitchBall>().RemovefromList(collision.gameObject.GetComponent<BoxCollider2D>());
             Destroy(collision.gameObject);
+
         }else if(collision.gameObject.name == "Player")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

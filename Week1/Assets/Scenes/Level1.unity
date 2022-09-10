@@ -701,9 +701,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.9
-  pickNextWaypointDist: 0.54
-  endReachedDistance: 0.7
+  slowdownDistance: 0.54
+  pickNextWaypointDist: 0.42
+  endReachedDistance: 0.54
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -2337,6 +2337,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1482910578, guid: 7ec72c2b8540b4a80a9650992ffba21b, type: 3}
+      propertyPath: greens.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482910578, guid: 7ec72c2b8540b4a80a9650992ffba21b, type: 3}
       propertyPath: blues.Array.data[0]
       value: 
       objectReference: {fileID: 1544512776}
@@ -2353,6 +2357,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 551450318}
     - target: {fileID: 1482910578, guid: 7ec72c2b8540b4a80a9650992ffba21b, type: 3}
+      propertyPath: greens.Array.data[0]
+      value: 
+      objectReference: {fileID: 51150569}
+    - target: {fileID: 1482910578, guid: 7ec72c2b8540b4a80a9650992ffba21b, type: 3}
       propertyPath: grenns.Array.data[0]
       value: 
       objectReference: {fileID: 51150569}
@@ -2360,6 +2368,26 @@ PrefabInstance:
       propertyPath: yellows.Array.data[0]
       value: 
       objectReference: {fileID: 584511710}
+    - target: {fileID: 1482910581, guid: 7ec72c2b8540b4a80a9650992ffba21b, type: 3}
+      propertyPath: xSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482910581, guid: 7ec72c2b8540b4a80a9650992ffba21b, type: 3}
+      propertyPath: ySpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482910582, guid: 7ec72c2b8540b4a80a9650992ffba21b, type: 3}
+      propertyPath: m_Mass
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482910582, guid: 7ec72c2b8540b4a80a9650992ffba21b, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482910582, guid: 7ec72c2b8540b4a80a9650992ffba21b, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5231540568128400633, guid: 7ec72c2b8540b4a80a9650992ffba21b, type: 3}
       propertyPath: m_RootOrder
       value: 3
