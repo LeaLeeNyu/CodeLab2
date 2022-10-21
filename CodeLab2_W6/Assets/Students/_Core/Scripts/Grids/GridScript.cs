@@ -66,8 +66,8 @@ public class GridScript : MonoBehaviour {
 		//	}
 		//}
 
-		if (GameManager.materialCost.ContainsKey(mat))
-			return GameManager.materialCost[mat];
+		if (CostManager.materialCost.ContainsKey(mat))
+			return CostManager.materialCost[mat];
 		else return 0;
 
 		//return costs[i];

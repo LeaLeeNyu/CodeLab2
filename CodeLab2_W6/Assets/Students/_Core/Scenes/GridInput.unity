@@ -3265,6 +3265,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061341611}
   m_CullTransparentMesh: 1
+--- !u!1 &1062114832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1062114834}
+  - component: {fileID: 1062114833}
+  m_Layer: 0
+  m_Name: CostManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1062114833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062114832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51b497c33ab2421439cc0b4eba633a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forestSlider: {fileID: 556367712}
+  grassSlider: {fileID: 1665612950}
+  lavaSlider: {fileID: 301403576}
+  pathSlider: {fileID: 531197899}
+  rockSlider: {fileID: 2121291576}
+  waterSlider: {fileID: 804487828}
+  forestText: {fileID: 2030823242}
+  grassText: {fileID: 2032773576}
+  lavaText: {fileID: 601208494}
+  pathText: {fileID: 930333900}
+  rockText: {fileID: 1061341613}
+  waterText: {fileID: 1325774580}
+  forestM: {fileID: 2100000, guid: 2a4020c9625aa43929473720fb82aa7a, type: 2}
+  grassM: {fileID: 2100000, guid: 991fd2620a7dd4f75bf7fc92e51d2ec9, type: 2}
+  lavaM: {fileID: 2100000, guid: 1d86dc5ea3cad479aa762de89673bfc6, type: 2}
+  pathM: {fileID: 2100000, guid: d17f2d4572f1f44a1a5975f4c51b313f, type: 2}
+  rockM: {fileID: 2100000, guid: f8592f830cb1d45f3be75c344c7882a0, type: 2}
+  waterM: {fileID: 2100000, guid: 5d06d31200aec4a918715fff1743e4bd, type: 2}
+--- !u!4 &1062114834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062114832}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 403.60672, y: 187.21661, z: 0.26594198}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1064038329
 GameObject:
   m_ObjectHideFlags: 0
@@ -5411,7 +5473,7 @@ GameObject:
   - component: {fileID: 2102391494}
   - component: {fileID: 2102391493}
   m_Layer: 0
-  m_Name: CostManager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5429,24 +5491,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac02540e834685447b89a2504bc0656a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forestSlider: {fileID: 556367712}
-  grassSlider: {fileID: 1665612950}
-  lavaSlider: {fileID: 301403576}
-  pathSlider: {fileID: 531197899}
-  rockSlider: {fileID: 2121291576}
-  waterSlider: {fileID: 804487828}
-  forestText: {fileID: 2030823242}
-  grassText: {fileID: 2032773576}
-  lavaText: {fileID: 601208494}
-  pathText: {fileID: 930333900}
-  rockText: {fileID: 1061341613}
-  waterText: {fileID: 1325774580}
-  forestMaterial: {fileID: 2100000, guid: 2a4020c9625aa43929473720fb82aa7a, type: 2}
-  grassMaterial: {fileID: 2100000, guid: 991fd2620a7dd4f75bf7fc92e51d2ec9, type: 2}
-  lavaMaterial: {fileID: 2100000, guid: 1d86dc5ea3cad479aa762de89673bfc6, type: 2}
-  pathMaterial: {fileID: 2100000, guid: d17f2d4572f1f44a1a5975f4c51b313f, type: 2}
-  rockMaterial: {fileID: 2100000, guid: f8592f830cb1d45f3be75c344c7882a0, type: 2}
-  waterMaterial: {fileID: 2100000, guid: 5d06d31200aec4a918715fff1743e4bd, type: 2}
 --- !u!4 &2102391494
 Transform:
   m_ObjectHideFlags: 0
