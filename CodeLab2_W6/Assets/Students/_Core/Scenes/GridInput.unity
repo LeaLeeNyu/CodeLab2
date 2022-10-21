@@ -4514,8 +4514,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2102391493}
-        m_TargetAssemblyTypeName: CostCustomization, Assembly-CSharp
+      - m_Target: {fileID: 1062114833}
+        m_TargetAssemblyTypeName: CostManager, Assembly-CSharp
         m_MethodName: AddCost
         m_Mode: 1
         m_Arguments:
